@@ -15,7 +15,7 @@ int main()
     char input;
 
     // Reading a singal character
-    cout << "Enter a character(One singal Letter): ";
+    cout << "Enter a character(One singal Letter)(in lowercase): ";
     cin >> input;
 
     abcd(input);
