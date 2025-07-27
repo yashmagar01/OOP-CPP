@@ -1,6 +1,7 @@
 /* Define a class mean in which assign two numbers in assign member function (i.e. 
 assign(4,8)) passed value from main function and define assign member function inside the 
-class and display the mean of two number on output screen. */
+class and display the mean of two number on output screen. 
+Name: yash ajay magar*/
 
 #include<iostream>
 using namespace  std;
