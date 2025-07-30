@@ -29,17 +29,17 @@ void Complex::add(Complex c1, Complex c2) {
 
 
 void Complex::write() {
-    cout << "Sum = " << real << " + " << imag << "i" << endl;
+    cout << "\nSum = " << real << " + " << imag << "i" << endl;
 }
 
 // Main function
 int main() {
     Complex c1, c2, result;
 
-    cout << "Enter first complex number:" << endl;
+    cout << "\nEnter first complex number:" << endl;
     c1.read();
 
-    cout << "Enter second complex number:" << endl;
+    cout << "\nEnter second complex number:" << endl;
     c2.read();
 
     result.add(c1, c2);  
