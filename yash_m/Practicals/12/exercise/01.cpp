@@ -1,49 +1,62 @@
-/* Multiple Inheritance demo: combine two bases into a result.
-Name: yash ajay magar */
+/*  1. Identify the following type of Inheritance shown . Write a definition of each class .Write suitable
+member functions to accept and display data for each class.
+    Name: yash ajay magar */
+
 #include <iostream>
 using namespace std;
 
-class Base1
+class Employee
 {
 public:
-    int a;
-    void acceptA()
+    int emp_id;
+    string name;
+
+    void read()
     {
-        cout << "\nEnter A: ";
-        cin >> a;
+        cout << "\nEnter Employee id and name: ";
+        cin >> emp_id >> name;
     }
-    void showA() { cout << "A = " << a << endl; }
 };
 
-class Base2
+class Emp_union:public Employee
 {
-public:
-    int b;
-    void acceptB()
-    {
-        cout << "Enter B: ";
-        cin >> b;
-    }
-    void showB() { cout << "B = " << b << endl; }
+    public:
+        int member_id;
+
+        void read()
+        {
+            Employee::read();
+            cout << "Enter the Member ID: "; cin >> member_id;
+        }
 };
 
-class Result : public Base1, public Base2
+class Emp_info:public Emp_union
 {
-public:
-    int sum;
-    void compute() { sum = a + b; }
-    void show() { cout << "Sum = " << sum << endl; }
+    public:
+        int salary;
+
+        void read()
+        {
+            Emp_union::read();
+            cout << "ENter your salary: ";
+            cin >> salary;
+        }
+        void display()
+        {
+            cout << "Employee ID: " << emp_id << endl;
+            cout << "Name: " << name << endl; 
+            cout << "Member ID: " << member_id << endl;
+            cout << "Salary: " << salary << endl;
+        }
 };
 
 int main()
 {
-    Result r;
-    r.acceptA();
-    r.acceptB();
-    r.compute();
-    cout << "\n--- Output ---\n";
-    r.showA();
-    r.showB();
-    r.show();
+    Emp_info e1;
+
+    e1.read();
+    cout << "---Output---" << endl;
+    e1.display();
+
     return 0;
 }
