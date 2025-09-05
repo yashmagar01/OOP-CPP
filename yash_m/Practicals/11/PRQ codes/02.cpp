@@ -54,16 +54,16 @@ class programmer:public employee
             cout << "Employee Id: " << emp_id << endl;
             cout << "Company Name: " << company << endl;
             cout << "Salaray: " << salary << endl;
-            cout << "How many Programming Languages you know: " << no_of_prog_lang_known << endl;
+            cout << "How many Programming Languages you know(Number): " << no_of_prog_lang_known << endl;
         }
 };
 
 int main()
 {
-    programmer s1;
+    programmer p1;
 
-    s1.read();
-    s1.display();
+    p1.read();
+    p1.display();
 
     return 0;
 }
